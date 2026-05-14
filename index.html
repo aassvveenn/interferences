@@ -20,7 +20,6 @@
   </header>
 
   <section class="site-section" id="journal">
-    <h2>🎙️ Journal</h2>
     <div class="section-content" id="journal-list">
       
       <article class="journal-entry">
@@ -37,37 +36,8 @@
     </div>
   </section>
 
-  <section class="site-section" id="rotations">
-    <h2>📻 En rotation</h2>
-    <div class="section-content" id="rotations-content">
-      <p class="loading">chargement…</p>
-    </div>
-  </section>
-
   <script>
-    // 1. Chargement des sections fixes (Rotations, etc.)
-    function loadSection(contentId, src) {
-      const container = document.getElementById(contentId);
-      if (!container) return;
-
-      fetch(src)
-        .then(r => r.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const doc = parser.parseFromString(html, 'text/html');
-          const main = doc.querySelector('main') || doc.querySelector('section');
-          if (main) {
-            container.innerHTML = main.innerHTML;
-          }
-        })
-        .catch(() => {
-          container.innerHTML = '<p class="observation-plain">— Erreur de chargement.</p>';
-        });
-    }
-
-    loadSection('rotations-content', 'rotations/rotations.html');
-
-    // 2. Gestion dynamique du Journal
+    // Gestion dynamique du Journal
     document.querySelectorAll('.entry-toggle').forEach(toggle => {
       const container = toggle.closest('.journal-entry');
       const content = container.querySelector('.entry-content');
