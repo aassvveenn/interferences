@@ -53,6 +53,19 @@ header .subtitle {
   margin-top: 0.5rem;
 }
 
+/* --- Footer ────────────────────────────────────────────────── */
+
+footer {
+  margin-top: 4rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--rule);
+  font-family: var(--font-sans);
+  font-size: 0.6rem;
+  color: var(--muted);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
 /* ── Sections ────────────────────────────────────────────── */
 
 .site-section { 
