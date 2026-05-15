@@ -55,14 +55,14 @@ header .subtitle {
 
 /* --- Copyright ────────────────────────────────────────────────── */
 
-.copyright {
+/*.copyright {
   font-family: var(--font-sans);
   font-size: 0.55rem;
   color: var(--muted);
   letter-spacing: 0.05em;
   text-transform: uppercase;
   margin-top: 0.4rem;
-}
+}*/
 
 /* ── Sections ────────────────────────────────────────────── */
 
@@ -104,11 +104,9 @@ header .subtitle {
   transition: box-shadow 0.2s ease;
 }
 
-/*
 .journal-entry:first-child .entry-toggle {
   border-top: none;
 }
-*/
 
 .entry-toggle.open {
   background: var(--bg);
