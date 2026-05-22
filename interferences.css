@@ -53,6 +53,17 @@ header .subtitle {
   margin-top: 0.5rem;
 }
 
+/* --- Copyright ────────────────────────────────────────────────── */
+
+/*.copyright {
+  font-family: var(--font-sans);
+  font-size: 0.55rem;
+  color: var(--muted);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-top: 0.4rem;
+}*/
+
 /* ── Sections ────────────────────────────────────────────── */
 
 .site-section { 
