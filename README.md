@@ -14,12 +14,6 @@ interferences/
 ├── journal/
 │   ├── YYYY-MM-DD-slug.html
 │   └── ...
-├── transmissions/
-│   └── transmissions.html
-├── rotations/
-│   └── rotations.html
-└── publications/
-    └── publications.html
 ```
 
 ---
@@ -29,7 +23,6 @@ interferences/
 - `index.html` est la page principale. Les entrées journal et les sections transversales y sont chargées à la volée via `fetch` — rien ne se recharge, tout reste sur une page.
 - `interferences.css` est le seul fichier de style. Toute modification CSS se répercute sur l'ensemble du site.
 - Tous les chemins sont **relatifs**. Le repo peut être renommé ou déplacé sans rien casser.
-- Les sections `transmissions`, `rotations`, `publications` sont des fichiers monolithiques qui évoluent à leur propre rythme.
 
 ---
 
@@ -75,15 +68,6 @@ La date en préfixe garantit l'ordre chronologique naturel dans le dossier. Plus
 2. Télécharger le fichier mis à jour
 3. Remplacer le fichier dans `journal/`
 4. Pusher — pas de modification de `index.html` nécessaire
-
----
-
-## Workflow pour une mise à jour de section transversale
-
-1. Demander la mise à jour à Claude
-2. Télécharger le fichier `.html` mis à jour
-3. Remplacer le fichier existant dans le dossier correspondant
-4. Pusher
 
 ---
 
