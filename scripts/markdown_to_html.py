@@ -40,7 +40,14 @@ TITLE_RE = re.compile(r'^#\s+')
 
 def build_md() -> MarkdownIt:
     """Return a MarkdownIt instance with HTML passthrough enabled."""
-    return MarkdownIt("commonmark", {"html": True})
+    md = MarkdownIt("commonmark", {"html": True})
+
+    def render_blank_link(self, tokens, idx, options, env):
+        tokens[idx].attrSet("target", "_blank")
+        return self.renderToken(tokens, idx, options, env)
+
+    md.add_render_rule("link_open", render_blank_link)
+    return md
 
 
 # ---------------------------------------------------------------------------
